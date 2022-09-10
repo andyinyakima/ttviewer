@@ -1,0 +1,37 @@
+
+
+Use the README of ttstreamer
+
+
+Comments :
+andylaberge@linux.com
+
+
+Addendum: 2July2016
+
+Made some modifications- removed w_scan because it wouldn't create the correct zap files.
+Installed "scan" in its place. VLC has been replaced with mpv it is much more manageable.
+Am using UDP instead of RTP to for the communication protocol. 
+
+This will be added to bitbucket using git instead of mercurial.
+
+07 March 2019 
+
+Added multicast addressing .i.e address box defaults to 127.0.0.1 but can be edited to 239.1.1.234 or 
+similar multicast address 
+
+Added two "scan" files, yakima_ATSC.txt has the frequencies for Yakima un-commented so that
+they will be picked up during a scan. USA_ATSC.txt is fully commented, just un-comment the
+# marks for your area frequencies and those stations will be scanned in.
+
+
+
+sudo apt install qtcreator
+sudo apt install qt5-default
+
+# Clang Code Model was a nuisance after Qt Creator 4.11.0 Qt 5.12.8
+#Go into Help->About Plugins and uncheck the Clang code model plugin.
+#You have to restart qt creator after that to make it take effect.
+#I had the same problem when debugging a unit test. I was debugging code
+#not in the project itself and it was dying repeatedly on me sending tons of kernel messages.
+
