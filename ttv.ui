@@ -291,17 +291,22 @@
      <string>MPV</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QCheckBox" name="bitrate_checkBox">
     <property name="geometry">
      <rect>
       <x>490</x>
       <y>240</y>
-      <width>83</width>
-      <height>28</height>
+      <width>111</width>
+      <height>23</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
     <property name="text">
-     <string>LUF_mon</string>
+     <string>Show Bit Rates</string>
     </property>
    </widget>
   </widget>

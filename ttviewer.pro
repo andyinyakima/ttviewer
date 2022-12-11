@@ -22,7 +22,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-
 SOURCES += main.cpp\
         ttv.cpp
 
@@ -30,7 +29,7 @@ HEADERS  += ttv.h
 
 FORMS    += ttv.ui
 CONFIG += c++11
-
+QMAKE_LFLAGS += -no-pie
 
 # Clang Code Model was a nuisance after Qt Creator 4.11.0 Qt 5.12.8
 #Go into Help->About Plugins and uncheck the Clang code model plugin.

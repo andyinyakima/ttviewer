@@ -233,6 +233,10 @@ void ttv::ShowMPVs()
     QString mute = "--mute";
     QString title;
     QString udplocal;
+    QString font_sz= "--osd-font-size=55";
+    QString osd_bar = "--osd-bar"; // this allows an osd
+    QString messag = "--osd-msg1=VBR ${=video-bitrate} ABR ${=audio-bitrate}"; //bitrates in cycles
+    QString color = "--osd-color=0.0/1.0/0.0"; // video parameters
 
     QStringList arguplay;
 
@@ -266,8 +270,14 @@ void ttv::ShowMPVs()
 
         QProcess *player = new QProcess;
 
-        arguplay<<udplocal<<geo<<title<<mute;
-
+        if(ui->bitrate_checkBox->isChecked() == true)
+        {
+            arguplay<<udplocal<<geo<<title<<mute<<font_sz<<osd_bar<<messag<<color;
+        }
+        else
+        {
+            arguplay<<udplocal<<geo<<title<<mute;
+        }
         player->start(progplayer,arguplay);
 
         num++;

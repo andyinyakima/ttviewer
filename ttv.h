@@ -13,6 +13,8 @@
 #include <QVideoWidget>
 #include <QMediaPlayer>
 #include <QMediaPlaylist>
+#include <QMultimedia>
+#include <QtMultimediaWidgets>
 
 namespace Ui {
 class ttv;
